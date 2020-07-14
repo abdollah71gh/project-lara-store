@@ -1,0 +1,93 @@
+body {
+    text-align: right;
+    font-family: isan;
+    font-size: 18px;
+    background-color: whitesmoke;
+    margin: 0 !important;
+}
+
+@font-face {
+    src: url("../font/isans.woff");
+}
+
+.slider {
+    width: 100% !important;
+    box-sizing: border-box;
+
+}
+
+.menu {
+    width: 100%;
+    height: 50%;
+}
+
+.about {
+    width: 100% !important;
+    padding: 30px;
+}
+
+.borderAbout {
+    width: 500px;
+    border: 2px solid #534a4a;
+    margin: 30px auto;
+}
+
+.about h6 {
+    line-height: 30px;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+
+.gallery {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+.gallery .borderGallery{
+    width: 500px;
+   border: 2px solid #534a4a;
+    margin: 20px auto;
+
+}
+.contact{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.contact .borderContact{
+    width: 500px;
+    border: 2px solid #534a4a;
+    margin: 20px auto;
+}
+label{
+    font-family: "Comic Sans MS";
+    text-transform: capitalize;
+}
+input[type=text]{
+    font-family: "Comic Sans MS";
+    border: 1px solid gray;
+}
+.card-header{
+    font-family: "Comic Sans MS";
+    background-color: rgba(0,0,0,0.2) !important;
+  color: white;
+}
+.btn{
+    font-family: "Comic Sans MS";
+}
+textarea{
+    height: 150px!important;
+    border: 1px solid grey!important;
+}
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-weight: bold;
+    font-family: "Comic Sans MS";
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.5);
+
+}
