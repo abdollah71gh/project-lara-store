@@ -13,6 +13,8 @@ class SliderController extends Controller
     public function index()
     {
         //
+        $slider = Slider::paginate(3);
+        return view('admin.slider.index', compact('slider'));
     }
 
 
@@ -45,9 +47,10 @@ class SliderController extends Controller
     }
 
 
-    public function show(Slider $slider)
+    public function show($slider)
     {
-        //
+        $slider = Slider::findOrFail($slider);
+        return $slider;
     }
 
 
@@ -63,8 +66,15 @@ class SliderController extends Controller
     }
 
 
-    public function destroy(Slider $slider)
+    public function destroy($sliderId)
     {
         //
+        $slider = Slider::findOrFail($sliderId);
+        $pathDelete = 'images/slider/' . $slider->image;
+        unlink($pathDelete);
+        Slider::destroy($sliderId);
+        session()->flash('danger','ایتم مورد نظر حذف گردید');
+        return redirect(route('slider.index'));
+
     }
 }
