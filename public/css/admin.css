@@ -1,0 +1,33 @@
+textarea{
+    border:  1px  solid gray!important;
+    height: 150px!important;
+    font-family: "Comic Sans MS";
+
+
+
+}
+label{
+    font-family: "Comic Sans MS";
+}
+input[type=text]{
+    border: 1px solid gray !important;
+    font-family: "Comic Sans MS";
+}
+.btn{
+    font-family: "Comic Sans MS";
+}
+table{
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+table th{
+    font-size: 17px;
+    background-color: #882929;
+    color: #ffffff;
+
+}
+input[type=file]{
+    border: 1px solid gray;
+}
+
+
