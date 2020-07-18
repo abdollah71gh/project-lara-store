@@ -28,6 +28,9 @@
                             <label>about</label>
                             <textarea class="form-control" name="about" placeholder="enter your about ?">
                             </textarea>
+                            @error('about')
+                            <div class="alert alert-danger text-center">{{$message}}</div>
+                            @enderror
                         </div>
                     <button type="submit" class="btn btn-success btn-block rounded-pill my-2">send slider</button>
                     {!! Form::close() !!}

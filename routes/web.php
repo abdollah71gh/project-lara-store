@@ -21,6 +21,7 @@ Route::middleware('auth')->prefix('adminstrator')->group(function () {
     Route::resource('/setting', 'SettingController');
     Route::resource('/slider', 'SliderController');
     Route::resource('/about', 'AboutController');
+    Route::resource('/gallery','GalleryController');
 
 });
 

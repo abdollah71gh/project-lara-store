@@ -27,7 +27,7 @@ class createAboutReauest extends FormRequest
             'font.required'=>'مقدار فونت الزامی میباشد',
             'font.max'=>'مقدار بیشتر از 40 پیکسل نباشد',
             'color.required'=>'مقدار رنگ الزامی میباشد',
-            'about'=>'مقدار درباره ما الزامی میباشد ',
+            'about.required'=>'مقدار درباره ما الزامی میباشد ',
             'about.between'=>'مقدار between بین 10 تا 1500 کارکتر باشد'
 
         ];
