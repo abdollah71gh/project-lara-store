@@ -1,3 +1,5 @@
+
+
 <div class="slider ">
 
     <div class="row mr-0 ml-0">
@@ -6,12 +8,10 @@
             <div id="wowslider-container1">
                 <div class="ws_images">
                     <ul>
-                        <li><img src="{{asset('slider/data1/images/2.jpg')}}" alt="2" title="2" id="wows1_0"/></li>
-                        <li><img src="{{asset('slider/data1/images/3.jpg')}}" alt="3" title="3" id="wows1_1"/></li>
-                        <li><a href="http://wowslider.net"><img src="{{asset('slider/data1/images/4.jpg')}}"
-                                                                alt="css image gallery" title="4" id="wows1_2"/></a>
-                        </li>
-                        <li><img src="{{asset('slider/data1/images/5.jpg')}}" alt="5" title="5" id="wows1_3"/></li>
+                        @foreach($slider as $item)
+                        <li><img src="{{asset('images/slider/'.$item->image)}}" alt="{{$item->alt}}" title="{{$item->caption}}" id="wows1_0"/ ></li>
+
+                        @endforeach
                     </ul>
                 </div>
                 <div class="ws_bullets">

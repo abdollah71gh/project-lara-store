@@ -29,5 +29,8 @@ table th{
 input[type=file]{
     border: 1px solid gray;
 }
+h4 {
+    color: white;
+}
 
 

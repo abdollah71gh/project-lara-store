@@ -20,6 +20,7 @@ Route::middleware('auth')->prefix('adminstrator')->group(function () {
     Route::get('/admin', 'HomeController@index')->name('admin');
     Route::resource('/setting', 'SettingController');
     Route::resource('/slider', 'SliderController');
+    Route::resource('/about', 'AboutController');
 
 });
 

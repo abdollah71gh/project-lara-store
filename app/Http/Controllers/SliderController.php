@@ -85,6 +85,7 @@ class SliderController extends Controller
             $file->move('images/slider' , $imageNow);
             $slider->image = $imageNow;
 
+
         }
         $slider->save();
         session()->flash('success', 'ایتم مورد نظر با موفقیت اپدیت گردید');
