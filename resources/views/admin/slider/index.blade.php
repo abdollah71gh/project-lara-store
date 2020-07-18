@@ -5,6 +5,7 @@
         <div class="row  justify-content-center ml-0 mr-0">
             <div class="col-12">
                 <div class="card">
+                    @include('envelope.message')
                     <div class="card-header bg-success text-light">show info</div>
                     <div class="card-body bg-light">
                         <table class="table table-hover text-center">
@@ -33,7 +34,9 @@
                                         {!! Form::open(['route'=>['slider.destroy',$item->id],'method'=>'delete','files'=>true]) !!}
                                         <button type="submit" class="btn btn-danger btn-sm rounded-pill">delete</button>
                                         {!! Form::close() !!}
+                                        <a href="{{route('slider.edit',$item->id)}}"class="btn btn-info btn-sm rounded-pill my-2">update</a>
                                     </td>
+
                                 </tr>
                             @endforeach
                             </tbody>
