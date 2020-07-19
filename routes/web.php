@@ -22,8 +22,9 @@ Route::middleware('auth')->prefix('adminstrator')->group(function () {
     Route::resource('/slider', 'SliderController');
     Route::resource('/about', 'AboutController');
     Route::resource('/gallery','GalleryController');
+    Route::resource('/contact','ContactController');
 
 });
-
+Route::post('/insertData','ContactController@store')->name('insert.data');
 
 
