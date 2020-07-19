@@ -8,10 +8,13 @@
                     @include('envelope.message')
                     <div class="card-header bg-success text-light">create about</div>
                     <div class="card-body bg-light">
-                        {!! Form::open(['route'=>'about.store','method'=>'post','files'=>'true']) !!}
+                        {!! Form::open(['route'=>'gallery.store','method'=>'post','files'=>'true']) !!}
                         <div class="form-group">
                             <label>Gallery</label>
-                            <input type="file" class="form-control" name="image" placeholder="please your image !">
+                            <input type="file" class="form-control" name="gallery" placeholder="please your image !">
+                            @error('gallery')
+                            <div class="alert alert-danger text-center">{{$message}}</div>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-success btn-block rounded-pill my-2">send slider</button>
                         {!! Form::close() !!}
