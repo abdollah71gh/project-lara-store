@@ -10,21 +10,31 @@
                         <div class="card text-left">
                             <div class="card-header bg-light ">info contack</div>
                             <div class="card-body bg-light">
+                                @include('envelope.message')
                                 <form action="{{route('insert.data')}}" method="post">
                                     <div class="form-group">
                                         <label for="fullname">fullName</label>
                                         <input type="text" name="fullname" class="form-control"
                                                placeholder="please enter fullname ?">
+                                        @error('fullname')
+                                        <div  class="alert alert-danger text-center">{{$message}}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="email">email</label>
                                         <input type="text" name="email" class="form-control"
                                                placeholder="please enter email ?">
+                                        @error('email')
+                                        <div  class="alert alert-danger text-center">{{$message}}</div>
+                                            @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="comment">comment</label>
                                         <textarea class="form-control" name="comment" id="comment">
                                         </textarea>
+                                        @error('comment')
+                                        <div  class="alert alert-danger text-center">{{$message}}</div>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-secondary btn-block rounded-pill">send info
                                     </button>

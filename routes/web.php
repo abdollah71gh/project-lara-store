@@ -21,10 +21,10 @@ Route::middleware('auth')->prefix('adminstrator')->group(function () {
     Route::resource('/setting', 'SettingController');
     Route::resource('/slider', 'SliderController');
     Route::resource('/about', 'AboutController');
-    Route::resource('/gallery','GalleryController');
-    Route::resource('/contact','ContactController');
+    Route::resource('/gallery', 'GalleryController');
+    Route::resource('/contact', 'ContactController');
 
 });
-Route::post('/insertData','ContactController@store')->name('insert.data');
+Route::post('/insertData', 'ContactController@store')->name('insert.data');
 
-
+Route::get('/mail', 'HomeController@sendmail');

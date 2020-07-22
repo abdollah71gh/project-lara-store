@@ -12,32 +12,34 @@
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>image</th>
+                                <th>fullname</th>
+                                <th>email</th>
+                                <th>comment</th>
                                 <th>show</th>
                                 <th>maneger</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($gallery as $item)
+                            @foreach($contact as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
-                                    <td> <img src="{{asset('images/gallery/'.$item->gallery)}}" width="60px"></td>
+                                    <td>{{$item->fullname}}</td>
+                                    <td>{{$item->email}}</td>
+                                    <td>{{$item->comment}}</td>
 
-                                    <td><a href="{{route('gallery.show',$item->id)}}"
-                                           class="btn btn-success btn-sm rounded-pill">show</a></td>
+                                    <td><a href="{{route('contact.show',$item->id)}}"
+                                           class="btn btn-success btn-sm rounded-pill">show</a>
+                                    </td>
                                     <td>
-                                        {!! Form::open(['route'=>['gallery.destroy',$item->id],'method'=>'delete']) !!}
+                                        {!! Form::open(['route'=>['contact.destroy',$item->id],'method'=>'delete']) !!}
                                         <button type="submit" class="btn btn-danger btn-sm rounded-pill ">delete</button>
-                                        <a href="{{route('gallery.edit',$item->id)}}" class="btn btn-success rounded-pill btn-sm">edit</a>
-
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        <a href="{{route('gallery.create')}}"
-                           class="btn btn-secondary rounded-pill btn-block">create</a>
+
                     </div>
                 </div>
 
